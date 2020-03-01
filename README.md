@@ -23,7 +23,7 @@ git clone https://github.com/pchev/libpasraw.git
 cd libpasraw
 ```
 
-Then run:
+Then compile and install:
 ```
 make clean all
 sudo make install PREFIX=/usr
