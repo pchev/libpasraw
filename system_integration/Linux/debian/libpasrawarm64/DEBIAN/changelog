@@ -1,0 +1,5 @@
+libpasraw (1.3.0) experimental; urgency=low
+
+  * libraw pascal interface
+
+ -- Patrick Chevalley <pch@ap-i.net>  Sun Mar 1 22:01:12 CEST 2020

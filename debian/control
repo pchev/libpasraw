@@ -1,0 +1,15 @@
+Source: libpasraw
+Section: education
+Priority: optional
+Maintainer: Patrick Chevalley <pch@ap-i.net>
+Build-Depends: debhelper (>= 9), libraw-dev
+Standards-Version: 4.2.1
+Homepage: http://libpasastro.sourceforge.net
+
+Package: libpasraw
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Pascal language friendly interface to libraw library
+ Provide shared libraries to interface Pascal program with 
+ libraw library.
+

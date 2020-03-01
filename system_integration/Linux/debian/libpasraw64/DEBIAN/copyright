@@ -1,0 +1,15 @@
+
+Copyright: 2020 Patrick Chevalley <pch@ap-i.net>
+
+Information :
+Name        : libpasraw
+Version     : 1.0.0
+Release     : 1
+Group       : Sciences/Astronomy
+License     : GPL-2+
+Packager    : Patrick Chevalley
+URL         : http://libpasastro.sourceforge.net
+Summary     : Pascal language friendly interface to astronomy libraries
+Description :
+Provide shared libraries to interface Pascal program with libraw.
+ 
