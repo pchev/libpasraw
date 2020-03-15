@@ -6,8 +6,8 @@ Name        : libpasraw
 Version     : 1.0.0
 Release     : 1
 Group       : Sciences/Astronomy
-License     : GPL-2+
- /usr/share/common-licenses/GPL-2
+License     : GPL-3
+ /usr/share/common-licenses/GPL-3
 Packager    : Patrick Chevalley
 URL         : http://libpasastro.sourceforge.net
 Summary     : Pascal language friendly interface to libraw library.

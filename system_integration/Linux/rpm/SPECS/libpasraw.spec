@@ -3,7 +3,7 @@ Name: libpasraw
 Version: 1
 Release: 1
 Group: Sciences/Astronomy
-License: GPLv2+
+License: GPLv3
 URL: http://libpasastro.sourceforge.net
 Packager: Patrick Chevalley
 BuildRoot: %_topdir/%{name}
