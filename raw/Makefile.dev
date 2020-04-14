@@ -1,0 +1,20 @@
+# Makefile for Linux with devel libraw in ${HOME}/source/LibRaw
+
+CFLAGS= -DLIBRAW_NOTHREADS -O3  -w -fPIC $(arch_flags)
+
+CXX           = g++
+
+SOName        = libpasraw.so.1
+SO_Name       = libpasraw.so.1.1
+LIBFLAGS      = -L${HOME}/source/LibRaw/lib/.libs -I${HOME}/source/LibRaw -shared -Wl,-soname,$(SOName) 
+LIBS          = -lraw
+
+SRC =	pasraw.cpp 
+
+all: $(SO_Name)
+
+$(SO_Name): $(OBJS)
+	$(CXX) $(CFLAGS) $(LIBFLAGS) -o $@ $(SRC) $(LIBS)
+
+clean:
+	rm -f *.a *.o $(SO_Name)
