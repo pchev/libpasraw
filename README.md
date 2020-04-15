@@ -29,3 +29,47 @@ make clean all
 sudo make install PREFIX=/usr
 sudo ldconfig
 ```
+### Compilation with a development version of Libraw
+
+In some case you want to use the very latest version of Libraw because it support new features or new camera. 
+
+But sometime you cannot install the new version system wide because it break other graphic software from the distribution. This is typically the case with Libraw19 and the 201910 snapshot.
+
+The solution is to compile the new version of Libraw but not installing it on the system, compile libpasraw with this new version and tell CCDciel to use this other library version. 
+
+Create a directory for the software:
+```
+mkdir ~/source
+cd ~/source
+```
+
+Get and compile Libraw, from git or untar a snapshot:
+```
+git clone https://github.com/LibRaw/LibRaw.git
+cd LibRaw
+autoreconf --install
+./configure
+make
+```
+
+Get and compile libpasraw using the new Libraw in ~/source/LibRaw, please edit Makefile.dev accordingly if you use another path.
+```
+cd ~/source
+git clone https://github.com/pchev/libpasraw.git
+cd libpasraw/raw
+make -f Makefile.dev
+```
+
+Copy the libpasraw library at the same location as Libraw:
+```
+cp libpasraw.so.1.1 ~/source/LibRaw/lib/.libs
+ln -s ~/source/LibRaw/lib/.libs/libpasraw.so.1.1 ~/source/LibRaw/lib/.libs/libpasraw.so.1
+```
+
+Run CCDciel using the new library:
+```
+cd
+export LD_LIBRARY_PATH=~/source/LibRaw/lib/.libs
+ccdciel
+```
+You can put this last two command in a shell script to not have to type them every time you want to launch CCDciel.
