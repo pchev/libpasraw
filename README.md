@@ -40,11 +40,11 @@ The solution is to compile the new version of Libraw but not installing it on th
 Create a directory for the software:
 ```
 mkdir ~/source
-cd ~/source
 ```
 
 Get and compile Libraw, from git or untar a snapshot:
 ```
+cd ~/source
 git clone https://github.com/LibRaw/LibRaw.git
 cd LibRaw
 autoreconf --install
