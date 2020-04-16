@@ -37,6 +37,11 @@ But sometime you cannot install the new version system wide because it break oth
 
 The solution is to compile the new version of Libraw but not installing it on the system, compile libpasraw with this new version and tell CCDciel to use this other library version. 
 
+Install the prerequisite:
+```
+sudo apt install git build-essential autoconf libtool
+```
+
 Create a directory for the software:
 ```
 mkdir ~/source
